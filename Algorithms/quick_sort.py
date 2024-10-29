@@ -4,7 +4,7 @@ def partition(arr,start,end):
     swap_marker=start-1
 
     while current_index<end:
-        print(current_index)
+        print(f'curr_index {current_index} | swap_marker {swap_marker}')
         if arr[current_index]>pivot:
             current_index+=1
         else:
@@ -15,6 +15,7 @@ def partition(arr,start,end):
                 current_index+=1
     swap_marker+=1
     arr[swap_marker],arr[end]=arr[end],arr[swap_marker]
+    print('*****END OF CALL******')
     return swap_marker
 
 
